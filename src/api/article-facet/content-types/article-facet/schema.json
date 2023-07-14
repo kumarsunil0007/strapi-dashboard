@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_facets",
+  "info": {
+    "singularName": "article-facet",
+    "pluralName": "article-facets",
+    "displayName": "Article Facet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "inversedBy": "facets"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "maxLength": 50000
+    },
+    "Excerpt": {
+      "type": "text"
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    },
+    "SearchText": {
+      "type": "component",
+      "repeatable": true,
+      "component": "search.search-text"
+    },
+    "ButtonLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "buttons.service-buttons"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::form-category.form-category",
+      "inversedBy": "forms"
+    },
+    "Updates": {
+      "type": "component",
+      "repeatable": true,
+      "component": "forms.form-updates"
+    },
+    "SKU": {
+      "type": "string"
+    },
+    "CopyText": {
+      "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "england_sub_category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::england-handbook.england-handbook",
+      "mappedBy": "forms"
+    },
+    "wales_sub_category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wales-handbook.wales-handbook",
+      "mappedBy": "forms"
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false
+    },
+    "importNotes": {
+      "type": "text"
+    },
+    "facets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::form-facet.form-facet",
+      "mappedBy": "forms"
+    }
+  }
+}

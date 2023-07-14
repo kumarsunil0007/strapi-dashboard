@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_course_landlordsguilds",
+  "info": {
+    "displayName": "landlordsguild",
+    "icon": "genderless"
+  },
+  "options": {},
+  "attributes": {
+    "amemberProductID": {
+      "type": "integer"
+    }
+  }
+}

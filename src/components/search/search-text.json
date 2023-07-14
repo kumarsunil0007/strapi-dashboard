@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_search_search_texts",
+  "info": {
+    "displayName": "Search Text",
+    "icon": "search",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  }
+}

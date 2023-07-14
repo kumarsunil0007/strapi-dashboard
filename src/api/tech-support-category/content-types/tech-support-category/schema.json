@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tech_support_categories",
+  "info": {
+    "singularName": "tech-support-category",
+    "pluralName": "tech-support-categories",
+    "displayName": "Tech Support Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "tech_supports": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tech-support.tech-support",
+      "mappedBy": "categories"
+    }
+  }
+}

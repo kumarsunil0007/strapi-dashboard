@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_facets",
+  "info": {
+    "singularName": "question-facet",
+    "pluralName": "question-facets",
+    "displayName": "Question Facet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "mappedBy": "facets"
+    }
+  }
+}

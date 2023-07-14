@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chatbots",
+  "info": {
+    "singularName": "chatbot",
+    "pluralName": "chatbots",
+    "displayName": "chatbot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+		"content-tags": {
+			"fieldName": "Tags",
+			"tags": {
+				"None": { "color": "neutral" },
+				"Done": { "color": "success" },
+				"In progress": { "color": "primary" },
+				"Error": { "color": "danger" }
+			},
+			"defaultTag": "None"
+		}
+  },
+  "attributes": {
+    "first_question": {
+      "type": "richtext"
+    },
+    "response1": {
+      "type": "richtext"
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "England",
+        "Wales"
+      ]
+    },
+    "apology_responses": {
+      "type": "text"
+    },
+    "intentResponse": {
+      "type": "text"
+    },
+    "results": {
+      "type": "richtext"
+    },
+    "prompt": {
+      "type": "richtext"
+    },
+    "languageModel": {
+      "type": "string"
+    },
+    "amemberID": {
+      "type": "biginteger"
+    },
+    "userEmail": {
+      "type": "string"
+    },
+	"Tags": {
+      "type": "customField",
+      "customField": "plugin::content-tags.content-tags"
+    }
+  }
+}

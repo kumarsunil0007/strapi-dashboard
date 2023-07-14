@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_categories",
+  "info": {
+    "singularName": "form-category",
+    "pluralName": "form-categories",
+    "displayName": "Form Category"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "forms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::form.form",
+      "mappedBy": "categories"
+    }
+  }
+}

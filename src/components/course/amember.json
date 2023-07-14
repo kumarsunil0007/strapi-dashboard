@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_course_amembers",
+  "info": {
+    "displayName": "rentsmart",
+    "icon": "question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "amemberProductID": {
+      "type": "integer"
+    }
+  }
+}

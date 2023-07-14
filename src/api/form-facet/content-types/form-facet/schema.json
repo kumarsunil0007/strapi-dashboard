@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_facets",
+  "info": {
+    "singularName": "form-facet",
+    "pluralName": "form-facets",
+    "displayName": "Form Facet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "forms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::form.form",
+      "inversedBy": "facets"
+    }
+  }
+}

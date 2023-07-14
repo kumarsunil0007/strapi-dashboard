@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tech_supports",
+  "info": {
+    "singularName": "tech-support",
+    "pluralName": "tech-supports",
+    "displayName": "Tech Support",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "content": {
+      "type": "richtext",
+      "maxLength": 50000
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    },
+    "SearchText": {
+      "displayName": "Search Text",
+      "type": "component",
+      "repeatable": true,
+      "component": "search.search-text"
+    },
+    "Excerpt": {
+      "type": "text"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tech-support-category.tech-support-category",
+      "inversedBy": "tech_supports"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false
+    },
+    "facets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tech-support-facet.tech-support-facet",
+      "mappedBy": "tech_supports"
+    },
+    "tag": {
+      "type": "string"
+    }
+  }
+}

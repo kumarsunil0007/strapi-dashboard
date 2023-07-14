@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_shared_images",
+  "info": {
+    "displayName": "SharedImage",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

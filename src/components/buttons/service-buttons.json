@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_buttons_service_buttons",
+  "info": {
+    "displayName": "Single Line Buttons",
+    "icon": "external-link-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "DisplayName": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_questions_replies",
+  "info": {
+    "displayName": "Reply",
+    "icon": "question-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "replyContent": {
+      "type": "richtext"
+    },
+    "userID": {
+      "type": "integer",
+      "required": true
+    },
+    "userName": {
+      "type": "string"
+    },
+    "dateTime": {
+      "type": "datetime"
+    },
+    "userEmail": {
+      "type": "email"
+    }
+  }
+}

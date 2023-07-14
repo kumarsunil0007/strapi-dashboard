@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "handbook_categories",
+  "info": {
+    "singularName": "handbook-category",
+    "pluralName": "handbook-categories",
+    "displayName": "Handbook Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "wales_handbooks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wales-handbook.wales-handbook",
+      "mappedBy": "categories"
+    },
+    "england_handbooks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::england-handbook.england-handbook",
+      "mappedBy": "categories"
+    }
+  }
+}

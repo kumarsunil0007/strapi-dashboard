@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_pages",
+  "info": {
+    "singularName": "pricing-page",
+    "pluralName": "pricing-pages",
+    "displayName": "Pricing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "table": {
+      "displayName": "Pricing Table",
+      "type": "component",
+      "repeatable": true,
+      "component": "pricing.pricing-table"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false
+    },
+    "subscribe_link": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

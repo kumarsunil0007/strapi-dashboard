@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    },
+    "england_sub_category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::england-handbook.england-handbook",
+      "inversedBy": "questions"
+    },
+    "wales_sub_category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wales-handbook.wales-handbook",
+      "inversedBy": "questions"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question-category.question-category",
+      "inversedBy": "questions"
+    },
+    "Excerpt": {
+      "type": "text"
+    },
+    "SearchText": {
+      "type": "component",
+      "repeatable": true,
+      "component": "search.search-text"
+    },
+    "facets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question-facet.question-facet",
+      "inversedBy": "questions"
+    },
+    "answer": {
+      "type": "richtext"
+    },
+    "chatbotResults": {
+      "type": "text"
+    }
+  }
+}

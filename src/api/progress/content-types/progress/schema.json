@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progresses",
+  "info": {
+    "singularName": "progress",
+    "pluralName": "progresses",
+    "displayName": "progress"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userID": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean",
+      "default": false
+    },
+    "england_handbooks_progress": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::england-handbook.england-handbook",
+      "inversedBy": "progresses"
+    },
+    "wales_handbooks_progress": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wales-handbook.wales-handbook",
+      "inversedBy": "progresses"
+    }
+  }
+}

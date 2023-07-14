@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tech_support_facets",
+  "info": {
+    "singularName": "tech-support-facet",
+    "pluralName": "tech-support-facets",
+    "displayName": "Tech support facet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "tech_supports": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tech-support.tech-support",
+      "inversedBy": "facets"
+    }
+  }
+}

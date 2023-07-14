@@ -1,0 +1,40 @@
+{
+  "name": "api-lettings-support",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi develop",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "serve": "strapi start"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.*",
+    "@strapi/plugin-documentation": "^4.11.2",
+    "@strapi/plugin-graphql": "^4.11.2",
+    "@strapi/plugin-i18n": "^4.11.2",
+    "@strapi/plugin-users-permissions": "^4.11.2",
+    "@strapi/strapi": "^4.11.2",
+    "react-scripts": "^5.0.1",
+    "sqlite3": "^5.1.6",
+    "strapi-plugin-content-tags": "^1.0.1",
+    "strapi-plugin-slugify": "^2.3.2",
+    "strapi-provider-email-smtp": "^1.0.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "d46f3880-476b-4020-9470-04b0382022b9"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@strapi/design-system": "^1.8.0"
+  }
+}

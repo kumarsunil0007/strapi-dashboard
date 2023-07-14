@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "maxLength": 50000
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "Excerpt": {
+      "type": "text"
+    },
+    "SearchText": {
+      "type": "component",
+      "repeatable": true,
+      "component": "search.search-text"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "ButtonLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "buttons.service-buttons"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service-category.service-category",
+      "inversedBy": "services"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "england_sub_category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::england-handbook.england-handbook",
+      "mappedBy": "services"
+    },
+    "wales_sub_category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wales-handbook.wales-handbook",
+      "mappedBy": "services"
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false
+    },
+    "facets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service-facet.service-facet",
+      "mappedBy": "services"
+    },
+    "tag": {
+      "type": "string"
+    }
+  }
+}

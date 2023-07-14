@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "singularName": "country",
+    "pluralName": "countries",
+    "displayName": "Country"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Country": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "wales_agents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wales-agent.wales-agent",
+      "inversedBy": "countries"
+    },
+    "england_agents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::england-agent.england-agent",
+      "inversedBy": "countries"
+    }
+  }
+}

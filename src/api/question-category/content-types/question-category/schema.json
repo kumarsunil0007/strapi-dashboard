@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_categories",
+  "info": {
+    "singularName": "question-category",
+    "pluralName": "question-categories",
+    "displayName": "Question category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "mappedBy": "categories"
+    }
+  }
+}

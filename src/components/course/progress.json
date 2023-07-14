@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_course_progresses",
+  "info": {
+    "displayName": "progress",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "amemberID": {
+      "type": "integer"
+    },
+    "read": {
+      "type": "boolean"
+    }
+  }
+}

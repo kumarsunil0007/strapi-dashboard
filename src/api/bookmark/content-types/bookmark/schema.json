@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmarks",
+  "info": {
+    "singularName": "bookmark",
+    "pluralName": "bookmarks",
+    "displayName": "Bookmarks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "bookmark_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bookmark-category.bookmark-category",
+      "inversedBy": "bookmarks"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

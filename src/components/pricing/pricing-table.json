@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pricing_pricing_tables",
+  "info": {
+    "displayName": "Pricing Table",
+    "icon": "money-bill",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "price": {
+      "type": "decimal"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price_period": {
+      "type": "string"
+    },
+    "features": {
+      "type": "richtext"
+    }
+  }
+}

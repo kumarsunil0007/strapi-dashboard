@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmark_categories",
+  "info": {
+    "singularName": "bookmark-category",
+    "pluralName": "bookmark-categories",
+    "displayName": "Bookmark category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bookmarks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bookmark.bookmark",
+      "mappedBy": "bookmark_category"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}
