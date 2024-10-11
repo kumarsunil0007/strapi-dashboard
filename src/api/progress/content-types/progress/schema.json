@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::wales-handbook.wales-handbook",
-      "inversedBy": "progresses"
+      "mappedBy": "progresses"
     }
   }
 }

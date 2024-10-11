@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wales-agent",
     "pluralName": "wales-agents",
-    "displayName": "Wales Agent"
+    "displayName": "Wales Agent",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false

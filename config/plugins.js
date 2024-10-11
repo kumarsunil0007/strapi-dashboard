@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-	ckeditor: true,
 	slugify: {
 		enabled: true,
 		config: {
@@ -11,6 +10,11 @@ module.exports = ({ env }) => ({
 		  },
 		},
 	},
+	/* ckeditor: {
+		enabled: true,
+		//resolve: "./src/plugins/strapi-plugin-ckeditor"
+	}, */
+
 	email: {
 		config:{
 			provider: 'strapi-provider-email-smtp',

@@ -91,7 +91,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::progress.progress",
-      "inversedBy": "england_handbooks_progress"
+      "mappedBy": "england_handbooks_progress"
     }
   }
 }

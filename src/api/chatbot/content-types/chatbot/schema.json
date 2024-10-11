@@ -11,16 +11,24 @@
     "draftAndPublish": true
   },
   "pluginOptions": {
-		"content-tags": {
-			"fieldName": "Tags",
-			"tags": {
-				"None": { "color": "neutral" },
-				"Done": { "color": "success" },
-				"In progress": { "color": "primary" },
-				"Error": { "color": "danger" }
-			},
-			"defaultTag": "None"
-		}
+    "content-tags": {
+      "fieldName": "Tags",
+      "tags": {
+        "None": {
+          "color": "neutral"
+        },
+        "Done": {
+          "color": "success"
+        },
+        "In progress": {
+          "color": "primary"
+        },
+        "Error": {
+          "color": "danger"
+        }
+      },
+      "defaultTag": "None"
+    }
   },
   "attributes": {
     "first_question": {
@@ -57,9 +65,24 @@
     "userEmail": {
       "type": "string"
     },
-	"Tags": {
+    "Tags": {
       "type": "customField",
       "customField": "plugin::content-tags.content-tags"
+    },
+    "title": {
+      "type": "string"
+    },
+    "voting": {
+      "type": "enumeration",
+      "enum": [
+        "Accurate",
+        "Wrong",
+        "N/A"
+      ]
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

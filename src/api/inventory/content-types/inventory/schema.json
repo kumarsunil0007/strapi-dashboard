@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "singularName": "inventory",
+    "pluralName": "inventories",
+    "displayName": "Inventory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Address": {
+      "type": "blocks"
+    },
+    "Clerk": {
+      "type": "string"
+    },
+    "electric": {
+      "type": "string"
+    },
+    "inventory_rooms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inventory-room.inventory-room",
+      "mappedBy": "inventory"
+    }
+  }
+}

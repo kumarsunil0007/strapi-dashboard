@@ -75,6 +75,9 @@
     },
     "chatbotResults": {
       "type": "text"
+    },
+    "chatbot": {
+      "type": "boolean"
     }
   }
 }

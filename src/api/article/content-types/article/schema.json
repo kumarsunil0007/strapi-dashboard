@@ -16,8 +16,7 @@
       "type": "string"
     },
     "content": {
-      "type": "richtext",
-      "maxLength": 50000
+      "type": "richtext"
     },
     "AppliesFrom": {
       "type": "date"
@@ -38,7 +37,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "SearchText": {
       "type": "component",

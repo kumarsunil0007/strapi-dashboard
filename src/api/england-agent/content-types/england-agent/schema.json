@@ -4,7 +4,8 @@
   "info": {
     "singularName": "england-agent",
     "pluralName": "england-agents",
-    "displayName": "England Agent"
+    "displayName": "England Agent",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false

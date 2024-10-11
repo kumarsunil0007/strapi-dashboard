@@ -25,13 +25,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::wales-agent.wales-agent",
-      "inversedBy": "categories"
+      "mappedBy": "categories"
     },
     "england_agents": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::england-agent.england-agent",
-      "inversedBy": "agent_module_categories"
+      "mappedBy": "agent_module_categories"
     }
   }
 }

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_rooms",
+  "info": {
+    "singularName": "inventory-room",
+    "pluralName": "inventory-rooms",
+    "displayName": "Inventory Room",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Room": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "inventory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::inventory.inventory",
+      "inversedBy": "inventory_rooms"
+    },
+    "inventory_room_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inventory-room-item.inventory-room-item",
+      "mappedBy": "inventory_room"
+    }
+  }
+}
